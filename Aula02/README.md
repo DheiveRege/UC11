@@ -1,59 +1,75 @@
 # Casos de Teste
 
-## CT01	RF01	Cadastrar usuário com dados válidos:
-Nome, email válido, senha válida:
-Usuário cadastrado com sucesso
+## Casos de Teste RF (Requisitos Funcionais)
 
-## CT02	RF01	Cadastrar usuário com email duplicado:
-Email já existente:
-Sistema deve impedir cadastro
+### CT01 - RF01  
+**Cenário:** Cadastrar usuário com dados válidos  
+**Entrada:** Nome, email válido, senha válida  
+**Resultado esperado:** Usuário cadastrado com sucesso  
 
-## CT03	RF02	Login com senha incorreta:
-Email válido + senha errada:
-Sistema deve negar acesso
+### CT02 - RF01  
+**Cenário:** Cadastrar usuário com email duplicado  
+**Entrada:** Email já existente  
+**Resultado esperado:** Sistema deve impedir cadastro  
 
-## ct04    rf03   cadstro valido:
- nome + descricao + data + qnt pessoas valido:    
- sistema de cadastrar evento
+### CT03 - RF02  
+**Cenário:** Login com senha incorreta  
+**Entrada:** Email válido + senha errada  
+**Resultado esperado:** Sistema deve negar acesso  
 
-## ct05    rf03    cadastro invalido:
-data do passado ou Número máximo de participantes zero ou menor:
-cadastro negado  
+### CT04 - RF03  
+**Cenário:** Cadastro válido de evento  
+**Entrada:** Nome + descrição + data + quantidade de pessoas válida  
+**Resultado esperado:** Sistema deve cadastrar o evento  
 
-## ct06    rf04    listagem do evento com dados validos:
-nome + data + Número de vagas disponíveis:
-lista o evento
+### CT05 - RF03  
+**Cenário:** Cadastro inválido de evento  
+**Entrada:** Data no passado ou número máximo de participantes menor ou igual a zero  
+**Resultado esperado:** Cadastro negado  
 
-## ct07    rf04    listagem do evento com dados invalidos:
-nome ou data ou Número de vagas disponíveis estiver errado:
-sistema nao devera listar o evento
+### CT06 - RF04  
+**Cenário:** Listagem de eventos com dados válidos  
+**Entrada:** Nome + data + número de vagas disponíveis  
+**Resultado esperado:** Sistema lista o evento  
 
-## ct08    rf05    inscrição válida de evento:
-nome + email valido + data valida + vagas livres:
-sistema deve permitir inscricao do ebento
+### CT07 - RF04  
+**Cenário:** Listagem de eventos com dados inválidos  
+**Entrada:** Nome ou data ou número de vagas inválidos  
+**Resultado esperado:** Sistema não deve listar o evento  
 
-## ct09    rf06    cancelamento valido:
-usuario valido e inscrito no evento + evento em data valida
-sistema deve permitir canlcelamento
+### CT08 - RF05  
+**Cenário:** Inscrição válida em evento  
+**Entrada:** Nome + email válido + data válida + vagas disponíveis  
+**Resultado esperado:** Sistema deve permitir inscrição no evento  
 
----
+### CT09 - RF06  
+**Cenário:** Cancelamento válido  
+**Entrada:** Usuário válido inscrito no evento + evento com data válida  
+**Resultado esperado:** Sistema deve permitir cancelamento  
 
-## ct10    rnf01    validacao de campos:
-se todos os campos forem preenchidos
-sistema deve validar todos os dados
+## Casos de Teste RNF (Requisitos Não Funcionais)
 
-## ct11    rnf02   seguranca de senha:
-a senha nao possui 8 caracteres + 1 letra maiuscula + 1 numero:
-sistema nao devera finalizar o cadastro
+### CT10 - RNF01  
+**Cenário:** Validação de campos  
+**Entrada:** Todos os campos preenchidos  
+**Resultado esperado:** Sistema deve validar todos os dados  
 
-## ct12    rnf03   Tempo de Resposta:
-se o timeout for maior que 2 sengundos:
-sistema deve reiniciar a tarefa
+### CT11 - RNF02  
+**Cenário:** Segurança de senha  
+**Entrada:** Senha sem 8 caracteres, sem letra maiúscula ou sem número  
+**Resultado esperado:** Sistema não deve finalizar o cadastro  
 
-## ct13    rnf04   Compatibilidade:
-se usuario nao estiver nos navegadores compativeis:
-o sistema nao devera ser executado
+### CT12 - RNF03  
+**Cenário:** Tempo de resposta  
+**Entrada:** Timeout maior que 2 segundos  
+**Resultado esperado:** Sistema deve reiniciar a tarefa  
 
-## ct14    rnf05   Integridade de Dados:
-se o email ja esxiste:
-sistema deve barrar com todas suas forças o cadastro
+### CT13 - RNF04  
+**Cenário:** Compatibilidade  
+**Entrada:** Usuário em navegador não compatível  
+**Resultado esperado:** Sistema não deve ser executado  
+
+### CT14 - RNF05  
+**Cenário:** Integridade de dados  
+**Entrada:** Email já existente  
+**Resultado esperado:** Sistema deve impedir o cadastro  
