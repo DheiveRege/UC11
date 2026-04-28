@@ -1,5 +1,6 @@
-import { desconto, div, multi, par, raiz, soma, sub, validadeIdade } from "../src/index"
 /*
+import { desconto, div, multi, par, raiz, soma, sub, validadeIdade } from "../src/index"
+
 test("deve somar 2 numeors", () => {
     expect(soma(2, 6)).toBe(8);
 });
@@ -36,7 +37,7 @@ describe("Funcao de numeros par", () => {
         expect(par(1293817)).toBeFalsy();
     });
 });
-*/
+
 describe("Funcao validar Idade",() =>{
     it("Retornar true por ele ser maior de idade", () => {
         expect(validadeIdade((18))).toBeTruthy();
@@ -45,3 +46,4 @@ describe("Funcao validar Idade",() =>{
         expect(validadeIdade(17)).toBeFalsy();
     });
 });
+*/

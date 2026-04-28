@@ -30,3 +30,7 @@ export function validadeIdade(idade: number): boolean {
     }
     return false;
 }
+export function validar(nota: number): boolean {
+    const valido = nota >= 7;
+    return valido ? nota >= 7 : nota;
+}
