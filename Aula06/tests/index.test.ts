@@ -1,4 +1,4 @@
-import { fretCalculado } from "../src"
+import { ehpar, fretCalculado } from "../src"
 
 
 describe("funcao frete", () => {
@@ -9,6 +9,16 @@ describe("funcao frete", () => {
         expect(fretCalculado(200)).toBeFalsy();
     });
 })
+
+describe("funcao verificar par", () => {
+    it("deve ser par porque 202 e par", () => {
+        expect(ehpar(202)).toBeTruthy();
+    });
+    it("deve ser impar porque 203 e impar", () => {
+        expect(ehpar(203)).toBeFalsy();
+    });
+})
+
 
 
 
