@@ -1,23 +1,24 @@
 {
-  "name": "aula07-api-tests",
+  "name": "src",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
-    "dev" : "ts-node-dev --respawn --transpile-only src/server.ts",
     "test": "jest",
-    "test:coverage": "jest --coverage"
+    "test:watch" : "jest --watch"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
-  "dependencies": {
-    "express": "^5.2.1"
-  },
   "devDependencies": {
-    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
     "@types/node": "^25.6.0",
+    "jest": "^30.3.0",
+    "ts-jest": "^29.4.9",
     "ts-node-dev": "^2.0.0",
     "typescript": "^6.0.3"
   }
